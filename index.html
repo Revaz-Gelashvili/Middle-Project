@@ -4,9 +4,193 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./public/script/script.js"></script>
+    <script src="./public/script/js/index.js" defer></script>
+    <script src="./public/script/js/menu.js" defer></script>
     <link rel="stylesheet" href="./public/css/style.css" />
-    <title>Project</title>
+    <title>Films</title>
   </head>
-  <body></body>
+  <body>
+    <div
+      class="main-div relative flex size-full min-h-screen flex-col bg-[#141414] dark group/design-root overflow-x-hidden"
+      style="font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <header
+          class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#303030] px-10 py-3"
+        >
+          <div class="left-header flex items-center gap-8">
+            <div class="flex items-center gap-4 text-white hidden sm:block">
+              <a href="#">
+                <h2
+                  class="text-white text-lg font-bold leading-tight tracking-[-0.015em]"
+                >
+                  Streamr
+                </h2></a
+              >
+            </div>
+            <div class="flex hidden md:block items-center">
+              <a class="text-white text-sm font-medium leading-normal" href="#"
+                >Movies</a
+              >
+              <a
+                class="text-white text-sm font-medium leading-normal mx-5"
+                href="#"
+                >TV Series</a
+              >
+              <a class="text-white text-sm font-medium leading-normal" href="#"
+                >My List</a
+              >
+            </div>
+            <div class="menu md:hidden cursor-pointer size-8 me-10">
+              <!-- Icon in scss -->
+            </div>
+          </div>
+          <div class="right-header flex flex-1 justify-end gap-8">
+            <label class="flex flex-col min-w-40 !h-10 max-w-64">
+              <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+                <div
+                  class="text-[#ababab] flex border-none bg-[#303030] items-center justify-center pl-4 rounded-l-lg border-r-0"
+                  data-icon="MagnifyingGlass"
+                  data-size="24px"
+                  data-weight="regular"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24px"
+                    height="24px"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                  >
+                    <path
+                      d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  placeholder="Search"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-[#303030] focus:border-none h-full placeholder:text-[#ababab] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                  value=""
+                />
+              </div>
+            </label>
+            <div class="profile cursor-pointer size-10 hidden sm:block">
+              <!-- Photo in SCSS -->
+            </div>
+          </div>
+        </header>
+        <div
+          id="sideBar"
+          class="fixed top-0 left-0 h-full overflow-hidden bg-[#131313] text-white flex flex-col z-50"
+          style="width: 0px; display: none"
+        >
+          <div
+            class="menu close md:hidden cursor-pointer size-8 me-10 ms-5 mt-10"
+          ></div>
+          <a
+            class="text-white text-sm font-medium leading-normal ms-5 mt-10"
+            href="#"
+            >Movies</a
+          >
+          <a
+            class="text-white text-sm font-medium leading-normal ms-5 mt-10"
+            href="#"
+            >TV Series</a
+          >
+          <a
+            class="text-white text-sm font-medium leading-normal ms-5 mt-10"
+            href="#"
+            >My List</a
+          >
+        </div>
+        <div
+          class="main-section px-10 md:px-30 sm:px-20 lg:px-40 pt-[100px] flex flex-1 justify-center py-5"
+        >
+          <div
+            class="layout-content-container flex flex-col max-w-[960px] flex-1"
+          >
+            <div class="top-containter @container shadow-xl">
+              <div class="min-size-div @[480px]:p-4">
+                <div class="background-div relative">
+                  <div>
+                    <video
+                      autoplay
+                      muted
+                      loop
+                      playsinline
+                      class="absolute inset-0 w-full h-full object-cover z-0 rounded-lg"
+                    >
+                      <source
+                        src="./public/assets/videos/bg-video.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
+                  <div
+                    class="z-40 relative flex min-h-[480px] flex-col gap-6 @[480px]:gap-8 @[480px]:rounded-lg items-center justify-center p-4"
+                  >
+                    <div class="flex flex-col gap-2 text-center">
+                      <h1
+                        class="text-white text-2xl md:text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
+                      >
+                        Search for Movies and TV Series
+                      </h1>
+                      <h2
+                        class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal"
+                      >
+                        Explore a vast library of films and shows. Find your
+                        next favorite.
+                      </h2>
+                    </div>
+                    <label
+                      class="flex flex-col min-w-40 h-14 w-full max-w-[480px] @[480px]:h-16"
+                    >
+                      <div
+                        class="flex w-full flex-1 items-stretch rounded-lg h-full"
+                      >
+                        <div
+                          class="text-[#ababab] flex border border-[#474747] bg-[#212121] items-center justify-center pl-[15px] rounded-l-lg border-r-0"
+                          data-icon="MagnifyingGlass"
+                          data-size="20px"
+                          data-weight="regular"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20px"
+                            height="20px"
+                            fill="currentColor"
+                            viewBox="0 0 256 256"
+                          >
+                            <path
+                              d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                            ></path>
+                          </svg>
+                        </div>
+                        <input
+                          id="searchInput"
+                          placeholder="Search"
+                          class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border border-[#474747] bg-[#212121] focus:border-[#474747] h-full placeholder:text-[#ababab] px-[15px] rounded-r-none border-r-0 pr-2 rounded-l-none border-l-0 pl-2 text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal"
+                          value=""
+                        />
+                        <div
+                          class="flex items-center justify-center rounded-r-lg border-l-0 border border-[#474747] bg-[#212121] pr-[7px]"
+                        >
+                          <button
+                            id="searchBtn"
+                            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#141414] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                          >
+                            <span class="truncate">Search</span>
+                          </button>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="result" class="pt-4 @container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

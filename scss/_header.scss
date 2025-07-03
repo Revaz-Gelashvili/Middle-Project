@@ -1,0 +1,28 @@
+.main-div {
+  .layout-container {
+    header {
+      background-color: #1313133b;
+      backdrop-filter: blur(10px);
+      .left-header {
+        .menu {
+          background-image: url(../assets/icons/menu.svg);
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+      .right-header {
+        .profile {
+          background-image: url(../assets/icons/profile.svg);
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+
+    .close {
+      background-image: url(../assets/icons/close.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
