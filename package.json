@@ -1,0 +1,23 @@
+{
+  "name": "middle-project",
+  "version": "1.0.0",
+  "description": "Pre-React Lecture",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Revaz-Gelashvili/Middle-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Revaz-Gelashvili/Middle-Project/issues"
+  },
+  "homepage": "https://github.com/Revaz-Gelashvili/Middle-Project#readme",
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
